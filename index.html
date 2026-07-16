@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Fork | Bistro & Lounge</title>
+    <!-- Tailwind CSS for elegant, modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .serif-font {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-stone-950 text-stone-100 min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-stone-950">
+
+    <!-- Header / Navigation -->
+    <header class="border-b border-stone-800/80 backdrop-blur-md sticky top-0 bg-stone-950/90 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-wide text-amber-500 serif-font">The Golden Fork</a>
+            <nav class="hidden md:flex space-x-8 text-sm uppercase tracking-wider text-stone-400">
+                <a href="#menu" class="hover:text-amber-500 transition-colors duration-200">Menu</a>
+                <a href="#featured" class="hover:text-amber-500 transition-colors duration-200">Our Specialty</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors duration-200">Visit Us</a>
+            </nav>
+            <a href="#contact" class="bg-amber-500 hover:bg-amber-600 text-stone-950 font-semibold px-5 py-2 rounded-full text-sm transition-all duration-200 hover:shadow-lg hover:shadow-amber-500/20">Book Table</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-20 space-y-24 flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-amber-500 uppercase tracking-widest text-xs font-semibold bg-amber-500/10 px-3 py-1.5 rounded-full">Artisan Cuisine</span>
+                <h1 class="text-5xl md:text-6xl font-normal leading-tight">Where flavor meets elegance.</h1>
+                <p class="text-stone-400 leading-relaxed text-lg">
+                    Experience a culinary journey crafted with fresh, locally sourced organic ingredients, prepared by world-class chefs who love what they do.
+                </p>
+                <div class="pt-4 flex flex-wrap gap-4">
+                    <a href="#menu" class="border border-stone-700 hover:border-amber-500 hover:text-amber-500 px-6 py-3 rounded-full text-sm font-medium transition-all duration-200">View Menu</a>
+                </div>
+            </div>
+
+            <!-- THE IMAGE PLACEHOLDER -->
+            <div class="relative group" id="featured">
+                <div class="absolute inset-0 bg-amber-500/10 rounded-2xl filter blur-xl group-hover:bg-amber-500/20 transition-all duration-300"></div>
+                <div class="relative bg-stone-900 border border-stone-800 p-4 rounded-3xl overflow-hidden shadow-2xl">
+                    
+                    <!-- 
+                      ========================================================================
+                      HOW TO LINK YOUR OWN IMAGE:
+                      
+                      Right now, the 'src' below points to a live placeholder image from Unsplash.
+                      
+                      To display your own hosted image:
+                      1. Upload your image (e.g., 'signature-dish.jpg') to your GitHub repository.
+                      2. If it is in the same folder as your 'index.html', replace the URL below with:
+                         src="signature-dish.jpg"
+                      
+                      3. If you created an images folder (recommended), replace it with:
+                         src="images/signature-dish.jpg"
+                      
+                      *Note: GitHub is case-sensitive! Ensure '.jpg' matches '.jpg' or '.JPG' exactly.
+                      ========================================================================
+                    -->
+                    <img 
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                        alt="Signature Ribs dish at The Golden Fork" 
+                        class="w-full h-80 object-cover rounded-2xl shadow-inner transition-transform duration-500 group-hover:scale-[1.02]"
+                        id="dish-image"
+                        onerror="this.src='https://placehold.co/800x600?text=Your+Dish+Image+Here'"
+                    />
+
+                    <div class="mt-4 flex justify-between items-center px-2">
+                        <div>
+                            <h3 class="text-xl font-medium text-stone-100">Slow-Smoked Dry Rub Ribs</h3>
+                            <p class="text-sm text-stone-400">Smoked for 14 hours over hickory wood</p>
+                        </div>
+                        <span class="text-xl font-semibold text-amber-500 serif-font">$32</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dummy Menu Preview Section -->
+        <section id="menu" class="space-y-10 pt-8 border-t border-stone-900">
+            <div class="text-center max-w-lg mx-auto space-y-3">
+                <h2 class="text-3xl md:text-4xl font-normal">Savor Our Classics</h2>
+                <p class="text-stone-400 text-sm">Crafted with the finest, handpicked ingredients</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex justify-between items-start border-b border-stone-900 pb-4">
+                    <div>
+                        <h4 class="font-medium text-stone-100">Pan-Seared Duck Breast</h4>
+                        <p class="text-xs text-stone-500 mt-1">With a sweet cherry reduction and roasted root vegetables</p>
+                    </div>
+                    <span class="text-amber-500 font-semibold serif-font">$28</span>
+                </div>
+                <div class="flex justify-between items-start border-b border-stone-900 pb-4">
+                    <div>
+                        <h4 class="font-medium text-stone-100">Wild Mushroom Risotto</h4>
+                        <p class="text-xs text-stone-500 mt-1">Creamy arborio rice with truffle oil and shaved parmesan</p>
+                    </div>
+                    <span class="text-amber-500 font-semibold serif-font">$24</span>
+                </div>
+                <div class="flex justify-between items-start border-b border-stone-900 pb-4">
+                    <div>
+                        <h4 class="font-medium text-stone-100">Crispy Skin Branzino</h4>
+                        <p class="text-xs text-stone-500 mt-1">Served over a bed of garlic braised greens and lemon herb oil</p>
+                    </div>
+                    <span class="text-amber-500 font-semibold serif-font">$30</span>
+                </div>
+                <div class="flex justify-between items-start border-b border-stone-900 pb-4">
+                    <div>
+                        <h4 class="font-medium text-stone-100">Warm Molten Lava Cake</h4>
+                        <p class="text-xs text-stone-500 mt-1">Rich Belgian chocolate cake with a scoop of house vanilla bean gelato</p>
+                    </div>
+                    <span class="text-amber-500 font-semibold serif-font">$12</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact Info -->
+    <footer id="contact" class="bg-stone-900/40 border-t border-stone-900 py-12">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-center md:text-left">
+            <div class="space-y-3">
+                <h4 class="text-amber-500 font-semibold tracking-wider text-sm uppercase">Hours</h4>
+                <p class="text-stone-400 text-sm">Mon - Thu: 4:00 PM - 10:00 PM</p>
+                <p class="text-stone-400 text-sm">Fri - Sun: 12:00 PM - 11:00 PM</p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-amber-500 font-semibold tracking-wider text-sm uppercase">Our Location</h4>
+                <p class="text-stone-400 text-sm">123 Culinary Lane</p>
+                <p class="text-stone-400 text-sm">Gourmet City, GC 90210</p>
+            </div>
+            <div class="space-y-3">
+                <h4 class="text-amber-500 font-semibold tracking-wider text-sm uppercase">Inquiries</h4>
+                <p class="text-stone-400 text-sm">hello@thegoldenfork.com</p>
+                <p class="text-stone-400 text-sm">+1 (555) 123-4567</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 mt-12 pt-6 border-t border-stone-900/80 text-center text-xs text-stone-600">
+            &copy; 2026 The Golden Fork. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
